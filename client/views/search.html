@@ -1,0 +1,84 @@
+
+<div class="container">
+    <div class="row">
+    
+      
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col col-xs-6">
+                    <h3 class="panel-title">Panel Heading</h3>
+                  </div>
+                  <div class="col col-xs-6 text-right">
+                    <button type="button" class="btn btn-sm btn-primary btn-create" ng-click="toggle('add')">Create New</button>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body">
+
+              <div class="row">
+				<div class="container" style="margin-top: 5%;">
+				    <div class="col-md-6 col-md-offset-1">
+
+				        <!-- Search Form -->
+				        <form role="form">
+				        
+				        <!-- Search Field -->
+				            <div class="row">
+				                <h1 class="text-center">Search Title</h1>
+				                <div class="form-group">
+				                    <div class="input-group">
+				                        <input class="form-control" type="text" ng-model="searchvalue"name="search" placeholder="Search" required/>
+				                        <span class="input-group-btn">
+				                            <button class="btn btn-success" type="submit" ng-click="searchlist(searchvalue);"><span class="glyphicon glyphicon-search" aria-hidden="true"><span style="margin-left:10px;">Search</span></button>
+				                        </span>
+				                        </span>
+				                    </div>
+				                </div>
+				            </div>
+				            
+				        </form>
+				        <!-- End of Search Form -->
+				            
+				    </div>
+				</div>
+              </div>
+
+              <!--listing-->
+              <div ng-repeat="reslist in searchdatalisting">
+  		            <div class="row"> 
+                      <div class="col-xs-12 col-sm-3 col-md-3">
+                          <a href="#">
+                              <img src="http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/10/http-www.urchinbali.comgallery.jpg" class="img-responsive img-box img-thumbnail">
+                          </a>
+                      </div> 
+                      <div class="col-xs-12 col-sm-9 col-md-9">
+                          <div class="list-group">
+                              <div class="list-group-item">
+                                  
+                                  <div class="row-content">
+                                       <h4><a href="#"><b>RestaurantName :</b>{{reslist.restaurantName}}</a></h4>
+                                        <p><b>Description :</b>{{reslist.description}}</p>
+                                        <p><b>Area :</b>{{reslist.area}}</p>   
+                                        <p><b>Foodtype :</b>{{reslist.foodtype}}</p>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div> 
+                  </div>
+                </div>
+                <hr>
+
+    
+                
+              </div>
+              <div class="panel-footer">
+                
+              </div>
+              </div>
+            </div>
+
+</div></div></div>
